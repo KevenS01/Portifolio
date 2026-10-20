@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KEY3D - Contato</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <img src="img/logo.svg" alt="Logo da KEY3D - Impressão 3D" width="300">
+    <h1>Contato e orçamento</h1>
+  </header>
+
+<nav class="menu">
+  <a href="index.html">Início</a>
+  <a href="produtos.html">Produtos</a>
+  <a href="sobre.html">Sobre</a>
+  <a href="contato.html">Contato</a>
+</nav>
+
+  <main>
+    <!-- A section organiza o formulário de contato em uma área própria da página. -->
+    <section id="formulario">
+      <h2>Solicite um orçamento</h2>
+      <form action="#" method="post">
+        <p>
+          <label for="nome">Nome:</label><br>
+          <input type="text" id="nome" name="nome" required>
+        </p>
+
+        <p>
+          <label for="email">E-mail:</label><br>
+          <input type="email" id="email" name="email" required>
+        </p>
+
+        <p>
+          <label for="quantidade">Quantidade:</label><br>
+          <input type="number" id="quantidade" name="quantidade" min="1" required>
+        </p>
+
+        <p>
+          <label for="referencia">URL de referência do modelo:</label><br>
+          <input type="url" id="referencia" name="referencia">
+        </p>
+
+        <p>
+          <label for="data">Data desejada:</label><br>
+          <input type="date" id="data" name="data">
+        </p>
+
+        <p>
+          <label for="material">Material:</label><br>
+          <select id="material" name="material">
+            <option value="pla">PLA</option>
+            <option value="petg">PETG</option>
+            <option value="silk">PLA Silk</option>
+          </select>
+        </p>
+
+        <p>
+          <label for="descricao">Descreva sua ideia:</label><br>
+          <textarea id="descricao" name="descricao" rows="5" cols="40"></textarea>
+        </p>
+
+        <fieldset>
+          <legend>Tipo de pedido</legend>
+          <input type="radio" id="pronta" name="tipo" value="pronta" checked>
+          <label for="pronta">Produto do catálogo</label><br>
+          <input type="radio" id="personalizada" name="tipo" value="personalizada">
+          <label for="personalizada">Peça personalizada</label>
+        </fieldset>
+
+        <p>
+          <input type="checkbox" id="confirmacao" name="confirmacao" required>
+          <label for="confirmacao">Confirmo que as informações estão corretas.</label>
+        </p>
+
+        <p>
+          <button type="submit">Enviar orçamento</button>
+          <button type="reset">Limpar</button>
+        </p>
+      </form>
+    </section>
+
+    <p class="link-interno"><a href="#formulario">Ir para o formulário</a></p>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 KEY3D. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>

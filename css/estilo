@@ -1,0 +1,350 @@
+/* =========================================================
+   KEY3D - Folha de estilos externa
+   Paleta tirada do logo: azul, vermelho e um azul-marinho escuro
+   ========================================================= */
+
+/* ---------- Variáveis de cor ---------- */
+:root {
+  --azul: #253ed3;
+  --azul-escuro: #12175c;
+  --vermelho: #d32525;
+  --fundo: #f3f4fa;
+  --branco: #ffffff;
+  --texto: #1d1f2e;
+  --borda: #d5d8ea;
+}
+
+/* ---------- SELETOR DE ELEMENTO (tag) ---------- */
+/* Cores e fundo da página (corpo) + tipografia base */
+body {
+  margin: 0;
+  color: var(--texto);
+  background-color: var(--fundo);
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Tipografia dos títulos */
+h1,
+h2,
+h3 {
+  font-family: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+  color: var(--azul-escuro);
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 0 0 0.75rem;
+  color: var(--azul);
+}
+
+h3 {
+  font-size: 1.15rem;
+  margin: 0.5rem 0;
+  color: var(--azul-escuro);
+}
+
+/* Tipografia dos parágrafos */
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0 0 0.75rem;
+}
+
+strong {
+  font-weight: 700;
+  color: var(--vermelho);
+}
+
+/* ---------- Cabeçalho (cores + box model) ---------- */
+header {
+  color: var(--azul-escuro);
+  background-color: var(--branco);
+  padding: 1.5rem 1rem;
+  text-align: center;
+  border-bottom: 0.3rem solid var(--azul);
+}
+
+/* O logo é uma página A4 com muito espaço em volta; o recorte mostra só a marca */
+header img {
+  display: block;
+  width: 100%;
+  max-width: 18rem;
+  height: 12rem;
+  margin: 0 auto;
+  object-fit: cover;
+  object-position: 50% 43%;
+}
+
+header p {
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+/* ---------- Menu de navegação: FLEXBOX ---------- */
+/* SELETOR DE CLASSE: .menu */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background-color: var(--azul-escuro);
+}
+
+/* Estilo dos links: estado normal */
+.menu a {
+  color: var(--branco);
+  background-color: transparent;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;
+  border-radius: 2rem;
+  border: 0.125rem solid transparent;
+}
+
+/* Estilo dos links: estado :hover */
+.menu a:hover {
+  color: var(--branco);
+  background-color: var(--vermelho);
+  border-color: var(--branco);
+}
+
+/* Links do conteúdo (normal e :hover) */
+main a {
+  color: var(--azul);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+main a:hover {
+  color: var(--vermelho);
+  text-decoration: none;
+}
+
+/* ---------- Conteúdo principal: max-width + unidades relativas ---------- */
+main {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+section {
+  background-color: var(--branco);
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid var(--borda);
+  border-radius: 0.75rem;
+}
+
+/* ---------- SELETOR DE ID ---------- */
+/* Destaque na home: fundo e borda diferentes das outras seções */
+#destaques {
+  background-color: #eef0ff;
+  border: 0.15rem solid var(--azul);
+}
+
+#catalogo {
+  border-top: 0.3rem solid var(--vermelho);
+}
+
+#formulario {
+  max-width: 36rem;
+}
+
+/* ---------- SELETOR DE CLASSE: .card (box model) ---------- */
+.card {
+  background-color: var(--branco);
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid var(--borda);
+  border-left: 0.35rem solid var(--azul);
+  border-radius: 0.5rem;
+}
+
+.card img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0.5rem auto;
+}
+
+/* Lista de produtos: FLEXBOX com quebra automática de linha */
+.lista-produtos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.lista-produtos .card {
+  flex: 1 1 22rem;
+  margin: 0;
+}
+
+/* Imagens com a mesma altura para os cards ficarem alinhados */
+.lista-produtos .card img {
+  width: 100%;
+  height: 14rem;
+  object-fit: contain;
+}
+
+.link-interno {
+  margin: 0 0 1.5rem;
+  text-align: center;
+}
+
+/* ---------- Listas ---------- */
+ol,
+ul {
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.35rem;
+}
+
+/* ---------- Tabela ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+th,
+td {
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--borda);
+  text-align: left;
+}
+
+th {
+  color: var(--branco);
+  background-color: var(--azul);
+  font-weight: 700;
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--fundo);
+}
+
+/* ---------- Formulário ---------- */
+label {
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="url"],
+input[type="date"],
+select,
+textarea {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  margin-top: 0.25rem;
+  padding: 0.6rem 0.75rem;
+  font-family: inherit;
+  font-size: 1rem;
+  border: 1px solid var(--borda);
+  border-radius: 0.4rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 0.15rem solid var(--azul);
+  border-color: var(--azul);
+}
+
+fieldset {
+  margin: 0 0 1rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--borda);
+  border-radius: 0.4rem;
+}
+
+legend {
+  padding: 0 0.5rem;
+  font-weight: 700;
+  color: var(--azul-escuro);
+}
+
+button {
+  padding: 0.65rem 1.5rem;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--branco);
+  background-color: var(--azul);
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--vermelho);
+}
+
+button[type="reset"] {
+  color: var(--azul-escuro);
+  background-color: var(--borda);
+}
+
+button[type="reset"]:hover {
+  color: var(--branco);
+  background-color: var(--azul-escuro);
+}
+
+/* ---------- Rodapé (cores) ---------- */
+footer {
+  color: var(--branco);
+  background-color: var(--azul-escuro);
+  padding: 1.25rem 1rem;
+  text-align: center;
+  border-top: 0.3rem solid var(--vermelho);
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* ---------- Responsividade básica ---------- */
+@media (max-width: 40rem) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  section {
+    padding: 1rem;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  table {
+    font-size: 0.8rem;
+  }
+
+  th,
+  td {
+    padding: 0.4rem;
+  }
+}
